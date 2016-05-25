@@ -1,0 +1,372 @@
+﻿body {
+    background: #f8f8f8;
+}
+.wrap-large {
+    width: 1190px;
+    margin: 20px auto;
+    overflow: hidden;
+    background: #fff;
+}
+.wrap-large .banner-box {
+    float: left;
+    width: 740px;
+    overflow: hidden;
+}
+.wrap-large .banner-box img {
+    display: block;
+    width: 740px;
+    height: 450px;
+}
+.wrap-large .sidebar-box {
+    margin-left: 740px;
+    height: 448px;
+    border: 1px solid #ddd;
+    color: #333;
+    background: #fff;
+}
+.login-hd,
+.login-tab,
+.login-cont {
+    margin: 0 66px;
+}
+.login-hd {
+    height: 32px;
+    padding-top: 20px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    text-align: right;
+}
+.login-hd:after {
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    content: '';
+    width: 80px;
+    height: 2px;
+    background-color: #f60;
+}
+.login-hd h2 {
+    float: left;
+    font-size: 18px;
+    color: #333;
+}
+.login-hd .link-btn {
+    display: inline-block;
+    margin: 4px 2px 0;
+    color: #666;
+    font-size: 14px;
+}
+.login-tab {
+    margin-top: 18px;
+    overflow: hidden;
+}
+.login-tab a {
+    display: inline-block;
+    margin-right: 30px;
+    font: normal 12px/18px "微软雅黑";
+}
+.login-tab a .icon-radio {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    margin-right: 10px;
+    background: url(../images/iconlist.png) no-repeat 0 0;
+    overflow: hidden;
+    vertical-align: -3px;
+}
+.login-tab .current .icon-radio {
+    background-position: -17px 0;
+}
+.login-cont .lgoin-group {
+    display: none;
+}
+.login-cont .lgoin-group .control-group {
+    margin-top: 10px;
+}
+.login-cont .lgoin-group .t-control-group {
+    line-height: 24px;
+    height: 24px;
+    margin-top: 6px;
+    text-align: right;
+    overflow: hidden;
+}
+.login-cont .lgoin-group .t-control-group input[type="checkbox"] {
+    vertical-align: -2px;
+    margin-right: 5px;
+}
+.login-cont .lgoin-group .t-control-group label {
+    display: block;
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    color: #333;
+}
+.login-cont .lgoin-group .t-control-group .forget-pwd {
+    color: #f60;
+}
+.login-cont .lgoin-group .controls {
+    position: relative;
+}
+.login-cont .lgoin-group .ipt-text,
+.login-cont .lgoin-group .controls .text-watermark {
+    width: 306px;
+    height: 18px;
+    line-height: 18px;
+    padding: 5px;
+    font-size: 14px;
+}
+.login-cont .lgoin-group .ipt-text {
+    border: 1px solid #ccc;
+}
+.login-cont .verifycode-group .verify-text {
+    width: 110px;
+}
+.login-cont .lgoin-group .pwd-text {
+    width: 125px;
+}
+.login-cont .verifycode-group .verify-image {
+    vertical-align: -12px;
+    width: 90px;
+}
+.login-cont .lgoin-group .ipt-text:focus {
+    border-color: #fc6;
+}
+.login-cont .lgoin-group .controls .text-watermark {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    color: #999;
+}
+.login-cont .lgoin-group .verify-btn {
+    display: inline-block;
+    width: 90px;
+    height: 30px;
+    margin-left: 5px;
+    background-color: #ecf5fe;
+    border: 1px solid #dbeaf9;
+    font: normal 12px/28px "微软雅黑";
+    color: #2e7dcd;
+    vertical-align: -3px;
+}
+.login-cont .lgoin-group .verify-btn:hover {
+    background-color: #69c;
+    border-color: #69c;
+    color: #fff;
+    cursor: pointer;
+}
+.login-cont .lgoin-group .verify-btn-dis:hover,
+.login-cont .lgoin-group .verify-btn-dis {
+    background-color: #ddd;
+    border-color: #ddd;
+    color: #999;
+    cursor: default;
+}
+.login-cont .button-group .login-btn {
+    display: block;
+    line-height: 36px;
+    width: 100%;
+    height: 36px;
+    letter-spacing: 4px;
+    font: normal 18px/36px "微软雅黑";
+    color: #fff;
+    background: #f60;
+    text-align: center;
+    cursor: pointer;
+}
+.login-cont .button-group .login-btn:hover {
+    background-color: #f50;
+}
+.login-cont .error-info {
+    margin-top: 10px;
+    line-height: 28px;
+    background-color: #fffbf6;
+    border: 1px solid #f5dcbc;
+    color: #ff5756;
+}
+.login-cont .error-info .icon-hint {
+    display: inline-block;
+    width: 14px;
+    height: 17px;
+    margin: 0 10px;
+    background: url(../images/iconlist.png) no-repeat -34px 0;
+    vertical-align: -6px;
+}
+.column-box {
+    margin-top: 10px;
+}
+.column-box .h-text {
+    color: #f60;
+}
+.link-cont {
+    line-height: 52px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+.column-box a,
+.link-cont a {
+    margin-right: 10px;
+    color: #3b83cb;
+}
+
+/*  第三方登录
+====================================================================================================*/
+
+.coagent-cont .coagent-tit {
+    line-height: 30px;
+    height: 30px;
+    margin: 6px 66px 0;
+    text-align: center;
+    position: relative;
+}
+.coagent-cont .coagent-tit::after {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    ;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+}
+.coagent-tit span {
+    display: inline-block;
+    padding: 0 10px;
+    background-color: #fff;
+    position: relative;
+    z-index: 9;
+}
+.coagent-cont .link-btn-cont {
+    margin-top: 8px;
+    font-size: 0;
+    text-align: center;
+}
+.coagent-cont .link-btn-cont a {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: 0 14px;
+    background: url(../images/coagent-icon_1.png) no-repeat;
+    opacity: 0.50;
+    filter: Alpha(opacity=50);
+    overflow: hidden;
+    text-indent: -30000px;
+}
+.coagent-cont .link-btn-cont a:hover {
+    opacity: 1;
+    filter: Alpha(opacity=100);
+}
+.coagent-cont .link-btn-cont .qq-login-btn {
+    background-position: 0 0;
+}
+.coagent-cont .link-btn-cont .sian-login-btn {
+    background-position: -25px 0;
+}
+.coagent-cont .link-btn-cont .weixin-login-btn {
+    background-position: -50px 0;
+}
+.cl {
+    clear: both;
+}
+
+/* 注册成功 && 注册失败  */
+
+.explain-info {
+    height: 280px;
+    margin-top: 10px;
+    padding-top: 80px;
+    text-align: center;
+    background: #fff;
+}
+.explain-info .icon_48x48 {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    margin: 0 10px;
+    background: #ccc;
+    vertical-align: -15px;
+}
+.explain-info .text-cont {
+    padding: 0 10px;
+    font-size: 14px;
+    line-height: 32px;
+}
+.explain-info .text-cont .number-box {
+    margin: 0 2px;
+    font-weight: bold;
+    color: #f60;
+    font-family: Tahoma;
+}
+.explain-info .link-btn {
+    color: #2e7dcd;
+    margin: 0 4px;
+}
+.explain-info .link-btn-group {
+    text-align: center;
+}
+.explain-info .link-btn-group .link-btn {
+    display: inline-block;
+    height: 36px;
+    font: normal 18px/36px "微软雅黑";
+    color: #fff;
+    text-align: left;
+    margin: 10px;
+    padding: 0 20px 0 60px;
+    background-color: #f60;
+    border-radius: 3px;
+    position: relative;
+}
+
+/*.explain-info .link-btn-group .link-btn-home{
+	
+	background-position: 10px center;
+	background-repeat:no-repeat;
+}*/
+
+.explain-info .link-btn-group .link-btn:before {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '.';
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    background: #f90;
+    border-radius: 3px 0 0 3px;
+}
+.explain-info .link-btn-group .link-btn-home:before {
+    background-image: url(../images/icon-home.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.explain-info .link-btn-group .link-btn-edit:before {
+    background-image: url(../images/icon-edit.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.explain-info .link-btn-group .link-btn-user:before {
+    background-image: url(../images/icon-user.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.explain-info .link-btn-group .link-btn-back:before {
+    background-image: url(../images/icon-back.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.success-info h2 {
+    font-size: 32px;
+    color: #53b224;
+}
+.success-info h2 .icon-success {
+    background: url(../images/icon-successful.png) no-repeat;
+}
+.failure-info h2 {
+    font-size: 32px;
+    color: #f60;
+}
+.failure-info h2 .icon-failure {
+    background: url(../images/icon-failure.png) no-repeat;
+}
