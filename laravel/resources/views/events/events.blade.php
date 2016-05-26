@@ -28,8 +28,6 @@
 <!--引用公用头部信息-->
 @include ("commonality.head");
 
-
-
 <!-- banner1 -->
 	<div class="banner1">
 		<div class="container">
@@ -39,92 +37,64 @@
 <!-- events -->
 	<div class="events">
 		<div class="container">
-			<h1 class="wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="300ms">今日更新</h1>
+			<h2 class="wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="300ms">今日更新</h2>
 			<div class="event-grids">
-				<div class="col-md-4 event-grid wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
-					<p class="dte">2 January,2016</p>
-					<img src="houst_img/4.jpg" alt=" " class="img-responsive" />
-					<div class="nobis">
-						<a href="single.html">impedit minus id quod soluta<span> maxime placeat facere</span></a>
-					</div>
-					<p class="quod">Nam libero tempore, cum soluta nobis est eligendi optio
-						cumque nihil impedit quo minus id quod maxime placeat facere possimus.</p>
-					<div class="more">
-						<a href="single.html" class="hvr-curl-bottom-right">Read More</a>
-					</div>
-				</div>
-				<div class="col-md-4 event-grid wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
-					<p class="dte">5 January,2016</p>
-					<img src="houst_img/7.jpg" alt=" " class="img-responsive" />
-					<div class="nobis">
-						<a href="single.html">id quod maxime placeat facere <span>maxime eligendi optio</span></a>
-					</div>
-					<p class="quod">Nam libero tempore, cum soluta nobis est eligendi optio
-						cumque nihil impedit quo minus id quod maxime placeat facere possimus.</p>
-					<div class="more">
-						<a href="single.html" class="hvr-curl-bottom-right">Read More</a>
-					</div>
-				</div>
-				<div class="col-md-4 event-grid wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
-					<p class="dte">8 January,2016</p>
-					<img src="houst_img/6.jpg" alt=" " class="img-responsive" />
-					<div class="nobis">
-						<a href="single.html">soluta nobis est eligendi quod <span>placeat facere possimus</span></a>
-					</div>
-					<p class="quod">Nam libero tempore, cum soluta nobis est eligendi optio
-						cumque nihil impedit quo minus id quod maxime placeat facere possimus.</p>
-					<div class="more">
-						<a href="single.html" class="hvr-curl-bottom-right">Read More</a>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="featured-events">
-				<h2 class="wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="300ms">Featured Events</h2>
-				<div class="featured-evnt">
-					<div class="col-md-8 featured-events-left wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="300ms">
-						<h5>Nam libero tempore, cum soluta nobis est eligendi optio dignissimos
-							<span>cumque nihil impedit quo minus id quod maxime placeat</span></h5>
-						<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui
-						blanditiis praesentium voluptatum deleniti atque corrupti
-						quos dolores et quas molestias excepturi sint occaecati cupiditate
-						non provident, similique sunt in culpa qui officia deserunt mollitia
-						animi, id est laborum et dolorum fuga.
-						Nam libero tempore, cum soluta nobis est eligendi optio
-						cumque nihil impedit quo minus id quod maxime placeat facere possimus.
-						Nam libero tempore, cum soluta nobis est eligendi optio
-						cumque nihil impedit quo minus id quod maxime placeat facere possimus,
-						omnis voluptas assumenda est, omnis dolor repellendus.</p>
-						<ul class="last1">
-							<li><a href="#">Temporibus autem quibusdam</a></li>
-							<li><a href="#">Et aut officiis debitis aut</a></li>
-							<li><a href="#">Necessitatibus saepe eveniet</a></li>
-						</ul>
-					</div>
-					<div class="col-md-4 featured-events-right wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
-						<img src="houst_img/11.jpg" alt=" " class="img-responsive" />
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-			</div>
-            <div class="featured-events">
-                <h2 class="wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="300ms">Featured Events</h2>
-                <div class="featured-evnt">
-                    <div class="col-md-8 featured-events-left wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="300ms">
-                        <h5>Nam libero tempore, cum soluta nobis est eligendi optio dignissimos
-                            <span>cumque nihil impedit quo minus id quod maxime placeat</span></h5>
-                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                            blanditiis praesentium voluptatum deleniti atque corrupti
-                            quos dolores et quas molestias excepturi sint occaecati cupiditate
-                            non provident, similique sunt in culpa qui officia deserunt mollitia
-                            animi, id est laborum et dolorum fuga..</p>
+            @foreach($arr as $v)
+                <div class="col-md-4 event-grid wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
+                    <p class="dte">{{$v->h_time}}</p>
+                    <img src="houst_img/{{$v->photo}}" alt="" class="img-responsive" style="height: 180px; width: 370px;"/>
+                    <div class="nobis">
+                            点击更多查看详细信息<br>
                     </div>
-                    <div class="col-md-4 featured-events-right wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
-                        <img src="houst_img/12.jpg" alt=" " class="img-responsive" />
+                    <p class="quod"></p>
+                    <div class="more">
+                        <a href="{{URL('events/more?h_id')}}={{$v->h_id}}" class="hvr-curl-bottom-right">更多</a>
                     </div>
-                    <div class="clearfix"> </div>
                 </div>
-            </div>
+             @endforeach
+				<div class="clearfix"> </div>
+			</div>{!! $arr->render() !!}<br><br>
+
+
+            <h2 class="wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="300ms">三日更新</h2>
+            <div class="event-grids">
+                @foreach($arr1 as $v1)
+                    <div class="col-md-4 event-grid wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
+                        <p class="dte">{{$v1->h_time}}</p>
+                        <img src="houst_img/{{$v1->photo}}" alt="" class="img-responsive" style="height: 180px; width: 370px;"/>
+                        <div class="nobis">
+                            点击更多查看详细信息<br>
+                        </div>
+                        <p class="quod"></p>
+                        <div class="more">
+                            <a href="{{URL('events/more?h_id')}}={{$v1->h_id}}" class="hvr-curl-bottom-right">更多</a>
+                        </div>
+                    </div>
+                @endforeach
+                <div class="clearfix"> </div>
+            </div>{!! $arr1->render() !!}<br><br>
+
+
+            <h2 class="wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="300ms">本周更新</h2>
+            <div class="event-grids">
+                @foreach($arr2 as $v2)
+                    <div class="col-md-4 event-grid wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
+                        <p class="dte">{{$v2->h_time}}</p>
+                        <img src="houst_img/{{$v2->photo}}" alt="" class="img-responsive" style="height: 180px; width: 370px;"/>
+                        <div class="nobis">
+                            点击更多查看详细信息<br>
+                        </div>
+                        <p class="quod"></p>
+                        <div class="more">
+                            <a href="{{URL('events/more?h_id')}}={{$v2->h_id}}" class="hvr-curl-bottom-right">更多</a>
+                        </div>
+                    </div>
+                @endforeach
+                <div class="clearfix"> </div>
+            </div>{!! $arr2->render() !!}
+
+
+
 		</div>
 	</div>
 <!-- //events -->
@@ -140,3 +110,8 @@
 <!-- //for bootstrap working -->
 </body>
 </html>
+<script>
+    function fun(){
+
+    }
+</script>
