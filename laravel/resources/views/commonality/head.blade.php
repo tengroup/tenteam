@@ -40,12 +40,23 @@
                 </nav>
                 <div class="social-icons">
                     <ul>
-                        <li><a class="icon-link round facebook" href="#"></a></li>
+                        <!--<li><a class="icon-link round facebook" href="#"></a></li>
                         <li><a class="icon-link round p" href="#"></a></li>
                         <li><a class="icon-link round twitter" href="#"></a></li>
                         <li><a class="icon-link round dribble" href="#"></a></li>
-                        <li><a href="{{URl('login')}}"><img src="houst_img/user_center.png" alt=""></a></li>
-                        <li><a href="{{URl('login')}}">登录</a></li>
+                        <li><a href="{{URl('login')}}"><img src="houst_img/user_center.png" alt=""></a></li>-->
+                        <font color="#f0f8ff">欢迎
+                                @if(empty($_COOKIE['username']))
+                                    游客
+                                @else
+                                    {{$_COOKIE['username']}}
+                                @endif
+                            登录</font>
+                        @if(!empty($_COOKIE['username']))
+                            <li><a href="{{'login/loginout'}}">退出</a></li>
+                        @else
+                            <li><a href="{{URl('login')}}">登录</a></li>
+                        @endif
                         <li><a href="{{URl('register')}}">注册</a></li>
                         <li role="presentation" class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
@@ -53,8 +64,14 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a href="{{URl('personal')}}">个人信息</a></li>
-                                <li><a href="{{URl('appointment')}}">预约列表</a></li>
-                                <li><a href="{{URl('fyAdd')}}">房源添加</a></li>
+                                @if(empty($_COOKIE['status']))
+                                    <li><a href="{{URl('fyAdd')}}">房源添加</a></li>
+                                    <li><a href="{{URl('appointment')}}">预约列表</a></li>
+                                @elseif($_COOKIE['status']==10)
+                                    <li><a href="{{URl('appointment')}}">预约列表</a></li>
+                                @elseif($_COOKIE['status']==1)
+                                    <li><a href="{{URl('fyAdd')}}">房源添加</a></li>
+                                @endif
                             </ul>
                         </li>
                     </ul>
