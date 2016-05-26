@@ -42,7 +42,7 @@
 				<div class="col-md-6">
 					<p>我的个人详细信息：</p>
 					<table class="table table-bordered">
-				<form action="perEditSubmit" method="post" id="userloginform" onsubmit="return sss()">
+				<form action="perEditSubmit" method="post" id="userloginform">
 						<input type="hidden" name="u_id" value="{{$user->u_id}}">
 						<thead>
 							<tr>
@@ -53,11 +53,11 @@
 						<tbody>
 							<tr>
 								<td>昵称：</td>
-								<td><input type="text" id="pet_name" name="pet_name" value="{{$user->pet_name}}"><span id="petname"></span></td>
+								<td><input type="text" id="pet_name" name="pet_name" value="{{$user->pet_name}}"></td>
 							</tr>
 							<tr>
 								<td>真实姓名：</td>
-								<td><input type="text" id="real_name" name="real_name" value="{{$user->real_name}}"><span id="realname"></span></td>
+								<td><input type="text" id="real_name" name="real_name" value="{{$user->real_name}}"></td>
 							</tr>
 							<tr>
 								<td>邮箱：</td>
@@ -133,32 +133,3 @@
 </body>
 </html>
 
-<script>
-	function sss(){
-		return pet()&&rea();
-	}
-	$("#pet_name").blur(pet);
-	$("#real_name").blur(rea);
-	function rea(){
-		var real_name=$("#real_name").val();
-		var reg=/^[\u4e00-\u9fa5]{2,4}$/;
-		if(reg.test(real_name)){
-			$("#realname").html("√");
-			return true;
-		}else{
-			$("#realname").html("请输入2~4个汉字");
-			return false;
-		}
-	}
-	function pet(){
-		var pet_name=$("#pet_name").val();
-		var reg=/^[\u4e00-\u9fa5]{2,4}$/;
-		if(reg.test(pet_name)){
-			$("#petname").html("√");
-			return true;
-		}else{
-			$("#petname").html("请输入2~4个汉字");
-			return false;
-		}
-	}
-</script>
