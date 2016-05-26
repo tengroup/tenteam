@@ -36,6 +36,8 @@ Route::get('perEdit','UserController@perEdit');
 Route::post('perEditSubmit','UserController@perEditSubmit');
 //fyAdd  房源添加
 Route::get('fyAdd','UserController@fyAdd');
+Route::any('addhoust','UserController@addHoust');
+Route::any('video','UserController@videoDo');
 //appointment  预约列表
 Route::get('appointment','UserController@appointment');
 //perLook  查看预约信息
@@ -54,7 +56,13 @@ Route::get('long','TypeController@long');
 
 //register
 Route::get('register','LoginController@register');
+Route::get('fuwutiaokuan','LoginController@fuwutiaokuan');
+Route::any('registerpro','LoginController@registerPro');
+
 
 //login
 Route::get('login','LoginController@login');
-
+Route::get('login/loginout','LoginController@loginOut');
+Route::get('dynamic','LoginController@dynamic');        //ajax获取动态密码
+Route::any('login_pro1','LoginController@loginPro1');    //账号登录
+Route::any('loginpro2','LoginController@loginPro2');    //手机登录
