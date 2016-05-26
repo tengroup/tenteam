@@ -24,7 +24,10 @@ Route::get('single','HomeController@single');
 
 //events
 Route::get('events','EventsController@index');
-
+// 更新
+Route::get('events','EventsController@lists');
+//查看今日信息的详情页
+Route::get('events/more','EventsController@more');
 
 //shortCodes
 Route::get('shortCodes','UserController@index');
