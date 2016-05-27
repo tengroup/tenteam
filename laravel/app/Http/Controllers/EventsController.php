@@ -15,12 +15,7 @@ class EventsController extends Controller
     //展示今日更新页面
     public function index()
     {
-        return view('events/events');
-    }
-    //查询更新的房源
-     public function lists()
-    {
-          //今天凌晨
+        //今天凌晨
         $endTime=date("Y-m-d 00:00:00",time());
         $time=time($endTime);
 
@@ -42,6 +37,7 @@ class EventsController extends Controller
         //var_dump($threedays);die;
         return view('events/events',['arr'=>$today,'arr1'=>$threedays,'arr2'=>$weekdays]);
     }
+
     //点击更多,查看详细页面
     public function more(){
         $h_id= Request::get('h_id');
